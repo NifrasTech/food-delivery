@@ -1,20 +1,10 @@
 const express = require("express")
 const router = express.Router()
-const dbo = require('./database')
 
-router.post("/menu/create",async (req, res)=>{
-    let conn = await dbo.getDatabase()
-    const collection = conn.collection('menus')
-    let menu = {
-        name: req.body.name,
-        price: req.body.price
-    }
-    await collection.insertOne(menu)
-   res.json(menu)
-})
+const menuController = require('../controller/MenuController')
 
-router.get("/menu",(req,res)=>{
-    res.send('Show menu')
-})
+router.post("/menu/create",menuController.create)
+router.post('/menu/:edit_id',menuController.update)
+router.get("/menu",menuController.all)
 
 module.exports=router
