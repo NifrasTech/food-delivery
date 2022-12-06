@@ -6,7 +6,9 @@ import Fab from '@mui/material/Fab';
 import RestoreIcon from '@mui/icons-material/Restore';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ArchiveIcon from '@mui/icons-material/Archive';
-import AddIcon from '@mui/icons-material/Add';
+import HomeIcon from '@mui/icons-material/Home';
+import Personicon from '@mui/icons-material/Person2';
+import MenuIcon from '@mui/icons-material/MenuBook';
 
 function Bottom() {
   const [value, setValue] = React.useState(0);
@@ -21,17 +23,14 @@ function Bottom() {
             setValue(newValue);
           }}
 
-          sx={{borderStartEndRadius:'20px', borderStartStartRadius:'20px'}}
+          sx={{borderStartEndRadius:'20px', borderStartStartRadius:'20px', boxShadow: 3}}
         >
-          <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
+          <BottomNavigationAction label="Home" icon={<HomeIcon />} />
+          <BottomNavigationAction label="Menu" icon={<MenuIcon />} />
+          <BottomNavigationAction label="Profile" icon={<Personicon />} />
           <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-          <BottomNavigationAction label="Archive" icon={<ArchiveIcon />} />
         </BottomNavigation>
       </Box>
-
-      <Fab size="large" sx={{position: 'absolute', bottom: 60, right: 16,}} color="secondary" aria-label="add">
-        <AddIcon />
-      </Fab>
     </Box>
   );
 }
