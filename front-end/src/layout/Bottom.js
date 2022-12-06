@@ -2,10 +2,7 @@ import React from 'react'
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import Box from '@mui/material/Box';
-import Fab from '@mui/material/Fab';
-import RestoreIcon from '@mui/icons-material/Restore';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import ArchiveIcon from '@mui/icons-material/Archive';
 import HomeIcon from '@mui/icons-material/Home';
 import Personicon from '@mui/icons-material/Person2';
 import MenuIcon from '@mui/icons-material/MenuBook';
