@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Bottom from './layout/Bottom';
-import TopBar from './layout/TopBar';
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import { createTheme,ThemeProvider} from '@mui/material/styles';
-import Carousel from './CustomerHome/Carousel';
-import Categories from './CustomerHome/Categories';
-import PopularFood from './CustomerHome/PopularFood';
-import { Box } from '@mui/system';
+
+import Home from './CustomerHome/Home';
+import Menu from './Menu/Menu';
+import TopBar from './layout/TopBar'
+import Bottom from './layout/Bottom'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const theme = createTheme({
@@ -21,16 +21,16 @@ const theme = createTheme({
 })
 
 root.render(
-  
   <React.StrictMode>
-    <ThemeProvider  theme={theme}>
-    <TopBar/>
-    <Box sx={{marginBottom: '65px'}}>
-      <Carousel/>
-      <Categories/>
-      <PopularFood/>
-    </Box>
-    <Bottom />
+    <ThemeProvider theme={theme}>
+      <Router>
+        <TopBar />
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/menu" element={<Menu />}></Route>
+        </Routes>
+        <Bottom />
+      </Router>
     </ThemeProvider>
   </React.StrictMode>
 );

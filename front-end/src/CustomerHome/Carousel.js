@@ -11,7 +11,7 @@ function Carousel() {
   const [value, setValue] = React.useState(0);
 
   return (
-    <Box sx={{marginTop:"10px", height:'200px'}}>
+    <Box sx={{height:'200px'}}>
       <Swiper
         scrollbar={{
           hide: true,
