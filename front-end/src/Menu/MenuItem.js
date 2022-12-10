@@ -1,10 +1,12 @@
-import { Grid, Card, Typography, Button, CardContent, CardActions, CardMedia, Fab} from '@mui/material';
+import { Grid, Card, Typography, CardContent, CardMedia, Box} from '@mui/material';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 
-function FoodItem(){
+function FoodItem({handleClickOpen}){
+
     return (
       <Grid item xs={6} md={2}>
-        <Card sx={{ maxWidth: 345, borderRadius:'15px' }} sx={{position:'relative'}}>
+        <Card sx={{ maxWidth: 345, borderRadius:'15px', position:'relative'}}>
+            <Box onClick={handleClickOpen}>
           <CardMedia
             component="img"
             height='130'
@@ -19,6 +21,7 @@ function FoodItem(){
             </Typography>
             
           </CardContent>
+          </Box>
             <FavoriteBorderOutlinedIcon color="primary" size='small' aria-label="add" sx={{position:'absolute', top:'5px', right:'5px'}}  />
         </Card>
       </Grid>
