@@ -5,6 +5,7 @@ import { createTheme,ThemeProvider} from '@mui/material/styles';
 
 import Home from './CustomerHome/Home';
 import Menu from './Menu/Menu';
+import Cart from './Cart/Cart';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -27,6 +28,7 @@ root.render(
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/menu" element={<Menu />}></Route>
+          <Route path="/cart" element={<Cart />}></Route>
         </Routes>
         
       </Router>

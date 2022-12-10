@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Paper, TextField, IconButton, Badge } from "@mui/material";
+import { Box, Paper, TextField, IconButton, Badge,Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import AppBar from "@mui/material/AppBar";
@@ -7,7 +7,6 @@ import CardMedia from "@mui/material/CardMedia";
 import Stack from "@mui/material/Stack";
 import Toolbar from "@mui/material/Toolbar";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
-import Typography from "@mui/material/Typography";
 import BackIcon from "@mui/icons-material/ArrowBack";
 import Slide from "@mui/material/Slide";
 
