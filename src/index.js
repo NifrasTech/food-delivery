@@ -23,7 +23,7 @@ const theme = createTheme({
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         
         <Routes>
           <Route path="/" element={<Home />}></Route>
