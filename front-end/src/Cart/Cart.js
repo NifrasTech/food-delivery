@@ -5,16 +5,13 @@ import {
   Typography,
   Badge,
   IconButton,
-  List,
-  ListItem,
-  ListItemAvatar,
-  Avatar,
-  ListItemText,
-  Divider,
+  List, 
 } from "@mui/material";
 import Bottom from "../layout/Bottom";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import BackIcon from "@mui/icons-material/ArrowBack";
+
+import CartItem from "./CartItem";
 
 export default function Cart() {
   return (
@@ -30,7 +27,7 @@ export default function Cart() {
             <BackIcon />
           </IconButton>
           <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
-            Food Information
+            Your Orders
           </Typography>
           <IconButton
             size="large"
@@ -44,13 +41,9 @@ export default function Cart() {
         </Toolbar>
       </AppBar>
       <List sx={{ width: "100%" }}>
-        <ListItem alignItems="center">
-          <ListItemAvatar>
-            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-          </ListItemAvatar>
-          <ListItemText primary="Brunch this weekend?" />
-        </ListItem>
-        <Divider variant="inset" component="li" />
+        <CartItem></CartItem>
+        <CartItem></CartItem>
+        <CartItem></CartItem>
       </List>
       <Bottom />
     </>

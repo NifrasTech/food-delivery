@@ -87,6 +87,7 @@ export default function ItemView({ handleClose, open }) {
           }}
         elevation={3}>
           <TextField
+          defaultValue='1'
           id="outlined-number"
           label="Quantity"
           type="number"
